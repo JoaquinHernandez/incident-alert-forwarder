@@ -15,3 +15,6 @@ A zero-dependency Python alerting engine that parses high-severity security inci
 ### 1. Local Terminal Dry-Run
 ```bash
 python3 event_dispatcher.py
+
+
+python3 event_dispatcher.py "[https://discord.com/api/webhooks/YOUR_WEBHOOK_URL_HERE](https://discord.com/api/webhooks/YOUR_WEBHOOK_URL_HERE)"
