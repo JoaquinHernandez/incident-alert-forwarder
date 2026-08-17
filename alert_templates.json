@@ -1,0 +1,35 @@
+{
+  "severity_colors": {
+    "CRITICAL": 15158332,
+    "HIGH": 15105570,
+    "MEDIUM": 16776960,
+    "LOW": 3066993,
+    "INFO": 3447003
+  },
+  "mock_events": [
+    {
+      "title": "🚨 Ransomware Honeypot File Tampered",
+      "severity": "CRITICAL",
+      "source": "Host: prod-db-node-01 (10.0.4.12)",
+      "description": "Unauthorized file modification detected in /var/data/confidential_vault.xlsx.",
+      "mitre_technique": "T1486 (Data Encrypted for Impact)",
+      "recommended_action": "Isolate host network interface immediately and capture memory snapshot."
+    },
+    {
+      "title": "⚠️ Unauthorized Privileged Role Modification",
+      "severity": "HIGH",
+      "source": "Identity Provider: AWS-IAM-US-EAST-1",
+      "description": "IAM Policy 'AdministratorAccess' attached to service account 'svc-ci-pipeline'.",
+      "mitre_technique": "T1078 (Valid Accounts)",
+      "recommended_action": "Verify pipeline change approval ticket #SEC-8941."
+    },
+    {
+      "title": "🛡️ Distributed SSH Brute-Force Cluster Flagged",
+      "severity": "MEDIUM",
+      "source": "Gateway: edge-firewall-02",
+      "description": "Subnet 198.51.100.0/24 rotated 18 failed login attempts across 6 unique IPs.",
+      "mitre_technique": "T1110.003 (Password Spraying)",
+      "recommended_action": "Enforce dynamic IP rate limiting and geo-blocking rule on perimeter."
+    }
+  ]
+}
